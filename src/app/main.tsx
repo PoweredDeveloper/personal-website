@@ -4,6 +4,8 @@ import { RouterProvider, createRouter } from '@tanstack/react-router'
 
 import { routeTree } from './routeTree.gen'
 
+import '@/lib/i18n'
+
 const router = createRouter({ routeTree })
 
 declare module '@tanstack/react-router' {
@@ -18,6 +20,6 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <RouterProvider router={router} />
-    </StrictMode>
+    </StrictMode>,
   )
 }
