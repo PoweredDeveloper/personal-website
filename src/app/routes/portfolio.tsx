@@ -18,10 +18,10 @@ function RouteComponent() {
   const { t } = useTranslation('portfolio')
 
   return (
-    <div className="font-ibm-mono selection:font-neutral selection:bg-select-background selection:text-select-foreground flex justify-center text-sm font-light">
+    <div className="selection:font-neutral selection:bg-select-background selection:text-select-foreground flex justify-center p-8 text-sm">
       <div className="max-w-[650px]">
-        <header className="my-24 grid min-h-24 grid-cols-[250px_200px_1fr] gap-12">
-          <div className="flex h-full flex-col justify-between">
+        <header className="mb-12 grid min-h-24 grid-cols-2 gap-2 md:my-24 md:grid-cols-[250px_200px_1fr] md:gap-12">
+          <div className="col-span-2 flex h-full flex-row items-start justify-between md:col-span-1 md:flex-col">
             <div>
               <h1>{t('header.name')}</h1>
               <p className="text-pale">{t('header.profession')}</p>
@@ -35,7 +35,7 @@ function RouteComponent() {
             <span className="select-none">*</span>
             <span>{t('header.location')}</span>
           </div>
-          <div className="flex h-full flex-col items-end justify-between text-nowrap select-none">
+          <div className="flex h-full flex-col items-end justify-between gap-3 text-nowrap select-none md:gap-0">
             <span className="hover:cursor-pointer hover:underline" onClick={() => i18n.changeLanguage('en')}>
               [ENG]
             </span>
@@ -47,12 +47,12 @@ function RouteComponent() {
             </span>
           </div>
         </header>
-        <main className="space-y-16">
-          <section className="grid grid-cols-[200px_1fr] gap-2">
+        <main className="space-y-6 md:space-y-16">
+          <section className="grid grid-cols-1 gap-2 md:grid-cols-[200px_1fr]">
             <h2>{t('about.title')}</h2>
             <p>{t('about.text')}</p>
           </section>
-          <section className="grid grid-cols-[200px_1fr] gap-2">
+          <section className="grid grid-cols-1 gap-2 md:grid-cols-[200px_1fr]">
             <h2>{t('skills.title')}</h2>
             <div className="space-y-6">
               <div className="flex flex-col gap-2">
@@ -69,7 +69,7 @@ function RouteComponent() {
               </div>
             </div>
           </section>
-          <section className="grid grid-cols-[200px_1fr] gap-2">
+          <section className="grid grid-cols-1 gap-2 md:grid-cols-[200px_1fr]">
             <h2>{t('contacts.title')}</h2>
             <div className="space-y-3">
               {contacts.map((c, index) => (
