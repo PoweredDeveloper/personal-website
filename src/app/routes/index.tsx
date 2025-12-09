@@ -1,6 +1,6 @@
 import AsciiImage from '@/components/AsciiImage'
 import { createFileRoute } from '@tanstack/react-router'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const Route = createFileRoute('/')({
   component: Portfolio,
@@ -9,13 +9,11 @@ export const Route = createFileRoute('/')({
 const IMAGES = [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 function Portfolio() {
-  const [image, setImage] = useState<string>('9.jpeg')
-  const imageIndex = useRef<number>(0)
+  const [image, setImage] = useState<string>('1.jpeg')
 
   useEffect(() => {
     setInterval(() => {
-      setImage(`${IMAGES[imageIndex.current]}.jpeg`)
-      imageIndex.current++
+      setImage(`${IMAGES[Math.round(Math.random() * (IMAGES.length - 1))]}.jpeg`)
     }, 5000)
   }, [])
 
@@ -26,16 +24,17 @@ function Portfolio() {
           imageUrl={image}
           options={{
             display: {
-              rows: 120,
+              rows: 128,
               fontSize: 6,
             },
             animation: {
               animated: true,
               revealMode: 'empty',
-              duration: 4500,
+              duration: 4000,
             },
             imageProcessing: {
-              contrast: 1.1,
+              contrast: 1.5,
+              sharpness: 1,
             },
           }}
         />

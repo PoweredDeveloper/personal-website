@@ -57,6 +57,7 @@ interface AsciiImageProps {
 }
 
 const DEFAULT_CHARSET = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~i!lI;:,"^`\'. '
+
 const SYMBOL_ASPECT_RATIO = 5 / 3 // Characters are wider than they are tall
 
 export default function AsciiImage({ imageUrl, options = {} }: AsciiImageProps) {

@@ -18,7 +18,7 @@ function RouteComponent() {
   const { t } = useTranslation('portfolio')
 
   return (
-    <div className="selection:font-neutral selection:bg-select-background selection:text-select-foreground flex justify-center p-8 text-sm">
+    <div className="selection:font-neutral selection:bg-select-background selection:text-select-foreground font-ibm-mono flex justify-center p-8 text-sm font-light">
       <div className="max-w-[650px]">
         <header className="mb-12 grid min-h-24 grid-cols-2 gap-2 md:my-24 md:grid-cols-[250px_200px_1fr] md:gap-12">
           <div className="col-span-2 flex h-full flex-row items-start justify-between md:col-span-1 md:flex-col">
@@ -65,7 +65,7 @@ function RouteComponent() {
               </div>
               <div className="flex flex-col gap-2">
                 <h3>{t('skills.tools_title')}</h3>
-                <p className="text-pale">Docker, Git, TypeScript, Prettier, Vite, Husky, OpenAPI TypeScript, PNPM</p>
+                <p className="text-pale">Docker, Git, TypeScript, Prettier, Vite, Husky, OpenAPI, PNPM</p>
               </div>
             </div>
           </section>
